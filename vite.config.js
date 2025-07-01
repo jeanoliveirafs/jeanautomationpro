@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(process.cwd(), 'client/src'),
+      '@': resolve(process.cwd(), 'src'),
       '@shared': resolve(process.cwd(), 'shared'),
       '@assets': resolve(process.cwd(), 'attached_assets'),
     },
