@@ -1,0 +1,59 @@
+{
+  "name": "Jean Automation Pro - Soluções de IA e Automação",
+  "short_name": "jeanautomationpro",
+  "description": "Especialista em IA e Automação, ajudando empresas a crescerem com tecnologia de ponta",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e293b",
+  "theme_color": "#1e293b",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "technology"],
+  "lang": "pt-BR",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/jeanautomationpro.png",
+      "sizes": "300x300",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/jeanautomationpro.png",
+      "sizes": "300x300",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Solicitar Análise Gratuita",
+      "short_name": "Análise",
+      "description": "Solicitar análise gratuita do seu negócio",
+      "url": "/#contato",
+      "icons": [
+        {
+          "src": "/jeanautomationpro.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Ver Cases de Sucesso",
+      "short_name": "Cases",
+      "description": "Conheça nossos cases de sucesso",
+      "url": "/#portfolio",
+      "icons": [
+        {
+          "src": "/jeanautomationpro.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
