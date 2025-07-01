@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.local
+.env.production.local
+.env.development.local
+dist/
+.vercel
+*.log
+.DS_Store
+Thumbs.db
+server/public
+vite.config.ts.*
+*.tar.gz
