@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react()],
@@ -8,12 +8,6 @@ export default defineConfig({
     alias: {
       '@': resolve(process.cwd(), 'client/src'),
       '@shared': resolve(process.cwd(), 'shared'),
-      '@assets': resolve(process.cwd(), 'attached_assets'),
     },
   },
-  build: {
-    outDir: 'dist/public',
-    emptyOutDir: true,
-  },
-  publicDir: 'public',
-}); 
+}) 
