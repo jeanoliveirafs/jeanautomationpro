@@ -1,6 +1,9 @@
 const CACHE_NAME = 'jeanautomationpro-v1';
 const urlsToCache = [
   '/',
+  '/index.html',
+  '/assets/index-BfcX8zPY.css',
+  '/assets/index-Z85yHyAD.js',
   '/manifest.json',
   '/jeanautomationpro.png',
   '/jeanoliveira.jpg',
