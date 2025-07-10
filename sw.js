@@ -4,6 +4,7 @@ const urlsToCache = [
   '/index.html',
   '/assets/index-BfcX8zPY.css',
   '/assets/index-Z85yHyAD.js',
+  '/form-handler.js',
   '/manifest.json',
   '/jeanautomationpro.png',
   '/jeanoliveira.jpg',
@@ -32,35 +33,13 @@ self.addEventListener('fetch', function(event) {
     caches.match(event.request)
       .then(function(response) {
         // Return cached version or fetch from network
-        if (response) {
-          console.log('ServiceWorker: Servindo do cache:', event.request.url);
-          return response;
-        }
-        
-        console.log('ServiceWorker: Buscando da rede:', event.request.url);
-        return fetch(event.request)
-          .then(function(response) {
-            // Check if we received a valid response
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            // Clone the response
-            var responseToCache = response.clone();
-
-            caches.open(CACHE_NAME)
-              .then(function(cache) {
-                cache.put(event.request, responseToCache);
-              });
-
-            return response;
-          });
+        return response || fetch(event.request);
       }
     )
   );
 });
 
-// Activate Event - Clean up old caches
+// Activate Event
 self.addEventListener('activate', function(event) {
   console.log('ServiceWorker: Ativando...');
   event.waitUntil(
@@ -75,5 +54,4 @@ self.addEventListener('activate', function(event) {
       );
     })
   );
-  self.clients.claim();
 });
